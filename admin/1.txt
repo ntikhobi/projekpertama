@@ -1,0 +1,381 @@
+<center>
+            <table border="0">
+              
+               
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Nama Pegawai </th> 
+                  <td  style="text-align: center;"> : </td> 
+                  <td style="padding:10px;"><?php echo $d['nama_pegawai']; ?></td>
+                </tr
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Tempat, tanggal lahir </th>
+                  <td style="text-align: center;"> : </td> 
+                  <td style="padding:10px;"><?php echo $d['ttl']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Jenis Kelamin </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['jk']; ?></td>    
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Golongan </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['golongan']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Jabatan </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['jabatan']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Tmt </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['tmt']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Status </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['status']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Jumlah Anak </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['jumlah_anak']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Nama Suami / Istri </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['nama_pendamping']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Pendidikan Terakhir  </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['pendidikan_terakhir']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Nama PT / Sekolah </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['nama_sekolah']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Tahun Masuk  </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['tahun_masuk']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Tahun Lulus </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['tahun_lulus']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> No Handphone </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['nope']; ?></td>
+                </tr>
+                <tr>
+                  <th style="width: 300px; padding:10px; text-align:left;"> Alamat </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;"><?php echo $d['alamat']; ?></td>
+                </tr>
+
+                
+                
+                <tr>
+                  <th style="width: 100px; padding:10px; text-align:left;"> Action </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                    <a href="editdataAsn.php?id=<?php echo $d['id']; ?>"> editdata | </a>
+                    <a href="hapusdataAsn.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Yakin Anda ingin menghapus <?php echo $d['nama_pegawai']; ?>');">
+                      hapusdata |
+                    </a>
+                    <a href="#?id=<?php echo $d['id']; ?>" onclick="return confirm('Yakin Anda ingin menghapus <?php echo $d['nama_pegawai']; ?>');">
+                      print pdf
+                    </a>
+                  </td>
+                  
+                </tr>
+              </table>
+
+              <table border="0">
+                <!-- Masukan Gambar -->
+                <tr>
+                  <th style="width: 100px; padding:10px; text-align:left;"> Karsu </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/karsu/<?= $d['karsu'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+
+                  <!-- Dua Kolom -->
+                  <th style="width: 100px; padding:10px; text-align:left;"> Karis </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/karis/<?= $d['karis'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+                </tr>
+                <tr>
+                  <th style="width: 100px; padding:10px; text-align:left;"> Karpeg </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/karpeg/<?= $d['karpeg'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+                
+
+                  <th style="width: 100px; padding:10px; text-align:left;"> SK Terbaru </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/sk-terbaru/<?= $d['sk_terbaru'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+                </tr>
+                <tr>
+                  <th style="width: 100px; padding:10px; text-align:left;"> KGB </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/kgb/<?= $d['kgb'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+                
+
+                  <th style="width: 100px; padding:10px; text-align:left;"> KPE </th>
+                  <td style="text-align: center;"> : </td>
+                  <td style="padding:10px;">
+                  <img src="../Asn/kpe/<?= $d['kpe'] ?>" width="200px" height="300px" alt="" >
+                  </td>
+                </tr>
+              </table>
+            </center> 
+
+            <?php } ?>
+
+
+
+<center>
+      <table>    
+        <thead>
+            <tr>
+              <th> No </th>
+              <th> Nama Pegawai </th>
+              <th> TTL </th>     
+              <th> Jenis Kelamin </th> 
+              <th> Golongan </th>                          
+              <th> Jabatan </th>
+              <th> TMT </th> 
+              <th> Status</th>
+              <th> Jumlah Anak </th> 
+              <th> Nama Pendamping </th> 
+              <th> Pendidikan Terakhir</th>     
+              <th> Nama Sekolah </th>    
+              <th> Tahun Masuk </th>     
+              <th> Tahun Lulus </th>   
+              <th> No HP </th>        
+              <th> Alamat </th> 
+              <!-- <th> Lainnya </th>      -->                    
+            </tr>
+        </thead>
+        
+        <tbody>
+
+        
+        <?php 
+          require '../koneksi.php';
+
+          $no = 1;
+          $data =  mysqli_query($conn,"SELECT * FROM pegawai WHERE id = '$id'");
+          
+            while($d = mysqli_fetch_array($data)){
+        ?>
+            <tr>
+              <td><?php echo $no++; ?></td>
+              <td><?php echo $d['nama_pegawai']; ?></td>
+              <td><?php echo $d['ttl']; ?></td>
+              <td><?php echo $d['jk']; ?></td>  
+              <td><?php echo $d['golongan']; ?></td>                   
+              <td><?php echo $d['jabatan']; ?></td>
+              <td><?php echo $d['tmt']; ?></td>
+              <td><?php echo $d['status']; ?></td>
+              <td><?php echo $d['jumlah_anak']; ?></td>
+              <td><?php echo $d['nama_pendamping']; ?></td>
+              <td><?php echo $d['pendidikan_terakhir']; ?></td>
+              <td><?php echo $d['nama_sekolah']; ?></td>
+              <td><?php echo $d['tahun_masuk']; ?></td>
+              <td><?php echo $d['tahun_lulus']; ?></td>
+              <td><?php echo $d['nope']; ?></td>
+              <td><?php echo $d['alamat']; ?></td>                                        
+            </tr>
+    
+              
+            
+            <?php
+              }
+            ?>
+                
+          </tbody>  
+        </table>            
+    </center> 
+    
+      <table>
+          <thead>
+            <tr>
+              <th> Karsu </th>
+              <th> Karis </th>
+              <th> Karpeg </th>
+              <th> SK - Terbaru </th>
+              <th> KGB </th>
+              <th> KPE </th>
+            </tr>
+        </thead>
+        <tbody>   
+          <?php 
+            require '../koneksi.php';
+
+            $no = 1;
+            $data =  mysqli_query($conn,"SELECT * FROM pegawai WHERE id = '$id'");
+            
+              while($d = mysqli_fetch_array($data)){
+          ?>
+
+          <tr>
+            <td>
+              <img src="../Asn/karsu/<?= $d["karsu"] ?>" width="280px" height="200px" alt="----" >
+            </td>
+            <td>
+              <img src="../Asn/karis/<?= $d['karis'] ?>" width="280px" height="200px" alt="----" >
+            </td>
+            <td>
+              <img src="../Asn/karpeg/<?= $d['karpeg'] ?>" width="280px" height="200px" alt="----" >
+            </td>
+            <td>
+              <img src="../Asn/sk-terbaru/<?= $d['sk_terbaru'] ?>" width="250px" height="350px" alt="----" >
+            </td>
+            <td>
+              <img src="../Asn/kgb/<?= $d['kgb'] ?>" width="250px" height="350px" alt="----" >
+            </td>
+            <td>
+              <img src="../Asn/kpe/<?= $d['kpe'] ?>" idth="280px" height="200px" alt="----" >
+            </td>
+          </tr>
+          <?php
+              }
+            ?>
+      </table> 
+
+
+
+
+
+
+
+       <tr>
+                    <th> Tempat, tanggal lahir </th>
+                    <td>'.$d['ttl'].'</td>
+                </tr>
+                <tr>
+                    <th> Jenis Kelamin </th>
+                    <td>'.$d['jk'].'</td>  
+                </tr>
+                <tr>
+                    <th> Jabatan </th>
+                    <td>'.$d['jabatan'].'</td>
+                </tr>
+                <tr>
+                    <th> Status </th>
+                    <td>'.$d['status'].'</td>
+                </tr>
+                <tr>
+                    <th> Jumlah Anak </th>
+                    <td>'.$d['jumlah_anak'].'</td>
+                </tr>
+                <tr>
+                    <th> Nama Suami / Istri </th>
+                    <td>'.$d['nama_pendamping'].'</td>
+                </tr>
+                <tr>
+                    <th> Pendidikan Terakhir  </th>
+                    <td>'.$d['pendidikan_terakhir'].'</td>
+                </tr>
+                <tr>
+                    <th> Nama PT / Sekolah </th>
+                    <td>'.$d['nama_sekolah'].'</td>
+                </tr>
+                <tr>
+                    <th> Tahun Masuk  </th>
+                    <td>'.$d['tahun_masuk'].'</td>
+                </tr>
+                <tr>
+                    <th> Tahun Lulus </th>
+                    <td>'.$d['tahun_lulus'].'</td>
+                </tr>
+                <tr>
+                    <th> No Handphone </th>
+                    <td>'.$d['nope'].'</td>
+                </tr>
+                <tr>
+                    <th> Alamat </th>
+                    <td>'.$d['alamat'].'</td>
+                </tr>
+                <tr>
+                    <th> Gambar </th>     
+                    <td> <img src="../NonAsn/'. $d['gambar'] .'">  </td>
+                </tr>
+
+
+   <table>    
+                        <tr>
+                            <thead>
+                                <th> Karsu </th>
+                                <th> Karis </th>
+                                <th> Karpeg </th>
+                                <th> SK - Terbaru </th>
+                                <th> KGB </th>
+                                <th> KPE </th>
+                            </thead>
+                        </tr>
+                        ';
+                    
+                        }
+                    $html .= '</table>
+
+                require '../koneksi.php';
+   
+                    while($d = mysqli_fetch_array($data)){
+                    
+                        $html .= 
+                            '
+                            <tr>
+                                <td> <img src="../Asn/karsu/'. $d['karsu'] .'">  </td>
+                            </tr>
+
+
+                            <img src="../Asn/karsu/'. $d['karsu'] .'"> 
+                    
+                               
+                   
+
+
+
+
+
+
+<tr>
+                        <th> Karis </th> 
+                        <td> : </td>     
+                        <td> <img src="../Asn/karis/'. $d['karis'] .'" width="280px" height="200px" alt="--"> </td>         
+                    </tr>
+                    <tr>
+                        <th> Karpeg </th> 
+                        <td> : </td>     
+                        <td> <img src="../Asn/karpeg/'. $d['karpeg'] .'" width="280px" height="200px" alt="--"> </td>         
+                    </tr>
+                    <tr>
+                        <th> SK - Terbaru </th> 
+                        <td> : </td>     
+                        <td> <img src="../Asn/sk-terbaru/'. $d['sk_terbaru'] .'" width="250px" height="350px" alt="--"> </td>         
+                    </tr>
+                    <tr>
+                        <th> KGB </th> 
+                        <td> : </td>     
+                        <td> <img src="../Asn/kgb/'. $d['kgb'] .'" width="250px" height="350px" alt="--"> </td>         
+                    </tr>
+                    <tr>
+                        <th> KPE </th> 
+                        <td> : </td>     
+                        <td> <img src="../Asn/kpe/'. $d['kpe'] .'" width="280px" height="200px" alt="----"> </td>         
+                    </tr>

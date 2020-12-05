@@ -1,0 +1,80 @@
+	$time = time();
+		$nama_gambar = $_FILES['lainnya'] ['name'];
+		$size = $_FILES['lainnya'] ['size'];
+		$erroe = $_FILES['lainnya'] ['error'];
+		$tipe_video = $_FILES['lainnya'] ['type'];
+		$folder = "uploads/";
+		$valid = array('jpg', 'png', 'jpeg');
+
+			if ( strlen($nama_gambar) ) {
+
+				list($txt, $ext) = explode(".", $nama_gambar);
+
+				if ( in_array($ext,$valid) ) {
+
+					if ( $size < 500000 ) {
+
+						$gambarnya = time().substr(str_replace(" ", "_", $txt), 5).".".$ext;
+						$lainnya = $folder.$gambarnya;
+
+						$tmp = $_FILES['lainnya'] ['tmp_name'];
+
+						if ( move_uploaded_file($tmp, $folder.$gambarnya) ) {
+
+							$mysqli->query($conn,"INSERT INTO nonasn VALUES('','$nama_pegawai','$ttl','$jk','$jabatan','$status','$jumlah_anak',
+							'$nama_pendamping','$pendidikan_terakhir','$nama_sekolah','$tahun_masuk','$tahun_lulus','$nope','$alamat',$lainnya')");
+
+							echo "
+									<script>
+										alert ('gambar berhasil di upload');
+
+									</script>
+							
+								 ";
+						} else {
+
+							echo "
+								<script>
+									alert ('gambar gagal di upload');
+
+								</script>
+						
+							";
+						}
+
+					} else {
+						echo "
+								<script>
+									alert ('ukuran gambar yang di upload terlalu besar');
+
+								</script>
+						
+							";
+					}
+
+				} else {
+					echo "
+								<script>
+									alert ('format gambar tidak valid');
+
+								</script>
+						
+							";
+				}
+
+			} else {
+
+				echo "
+								<script>
+									alert ('gambar belum di pilih');
+
+								</script>
+						
+							";
+			}
+		
+			exit;
+			
+
+
+		}
